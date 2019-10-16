@@ -1,0 +1,15 @@
+#import Item from 'item.graphql'
+
+type List {
+  id: ID!
+  title: String!
+  items: [Item!]!
+}
+
+input CreateListInput {
+  title: String!
+}
+
+input UpdateListInput {
+  title: String
+}

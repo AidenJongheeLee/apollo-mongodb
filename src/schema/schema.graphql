@@ -1,0 +1,18 @@
+#import list, CreateListInput, UpdateListInput from 'list.graphql'
+#import Item, CreateItemInput, UpdateItemInput from 'item.graphql'
+
+type Query {
+  lists(query: String): [List!]!
+  items(query: String): [Item!]!
+  item(id: ID!): Item!
+  list(id: ID!): List!
+}
+
+type Mutation {
+  createList(data: CreateListInput): List!
+  updateList(id: ID!, data: UpdateListInput): List!
+  deleteList(id: ID!): List
+  createItem(data: CreateItemInput): Item!
+  updateItem(id: ID!, data: UpdateItemInput): Item!
+  deleteItem(id: ID!): Item
+}

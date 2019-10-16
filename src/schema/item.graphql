@@ -1,0 +1,19 @@
+# import List from './list.graphql'
+
+type Item {
+  id: ID!
+  note: String!
+  finished: Boolean!
+  list: List!
+}
+
+input CreateItemInput {
+  note: String!
+  list: ID!
+}
+
+input UpdateItemInput {
+  note: String
+  list: ID
+  finished: Boolean
+}
